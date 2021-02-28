@@ -18,10 +18,10 @@ ICON_DIR = os.path.dirname(__file__)  # Полный путь к каталог�
 class Platform(sprite.Sprite):
     def __init__(self, x, y):
         sprite.Sprite.__init__(self)
-        self.image = Surface((PLATFORM_WIDTH, PLATFORM_HEIGHT))
+        self.image = Surface((width, height_1))
         self.image.fill(Color(PLATFORM_COLOR))
         self.image = image.load("%s/blocks/platform.png" % ICON_DIR)
-        self.rect = Rect(x, y, PLATFORM_WIDTH, PLATFORM_HEIGHT)
+        self.rect = Rect(x, y, width, height_1)
 
 
 MOVE_SPEED = 7
@@ -232,12 +232,12 @@ def main():
                 entities.add(pf)
                 platforms.append(pf)
 
-            x += PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
-        y += PLATFORM_HEIGHT  # то же самое и с высотой
+            x += width  # блоки платформы ставятся на ширине блоков
+        y += height_1  # то же самое и с высотой
         x = 0  # на каждой новой строчке начинаем с нуля
 
-    total_level_width = len(level[0]) * PLATFORM_WIDTH  # Высчитываем фактическую ширину уровня
-    total_level_height = len(level) * PLATFORM_HEIGHT  # высоту
+    total_level_width = len(level[0]) * width  # Высчитываем фактическую ширину уровня
+    total_level_height = len(level) * height_1  # высоту
 
     camera = Camera(camera_configure, total_level_width, total_level_height)
 
@@ -273,10 +273,10 @@ def main():
 class Platform(sprite.Sprite):
     def __init__(self, x, y):
         sprite.Sprite.__init__(self)
-        self.image = Surface((PLATFORM_WIDTH, PLATFORM_HEIGHT))
+        self.image = Surface((width, height_1))
         self.image.fill(Color(PLATFORM_COLOR))
         self.image = image.load("%s/blocks/platform.png" % ICON_DIR)
-        self.rect = Rect(x, y, PLATFORM_WIDTH, PLATFORM_HEIGHT)
+        self.rect = Rect(x, y, width, height_1)
 
 
 MOVE_SPEED = 7
@@ -494,12 +494,12 @@ def main():
                 entities.add(pf)
                 platforms.append(pf)
 
-            x += PLATFORM_WIDTH  # блоки платформы ставятся на ширине блоков
-        y += PLATFORM_HEIGHT  # то же самое и с высотой
+            x += width  # блоки платформы ставятся на ширине блоков
+        y += height_1  # то же самое и с высотой
         x = 0  # на каждой новой строчке начинаем с нуля
 
-    total_level_width = len(level[0]) * PLATFORM_WIDTH  # Высчитываем фактическую ширину уровня
-    total_level_height = len(level) * PLATFORM_HEIGHT  # высоту
+    total_level_width = len(level[0]) * width  # Высчитываем фактическую ширину уровня
+    total_level_height = len(level) * height_1  # высоту
 
     camera = Camera(camera_configure, total_level_width, total_level_height)
 
